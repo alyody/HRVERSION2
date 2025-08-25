@@ -15,7 +15,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# Enhanced CSS styling
+# Enhanced CSS styling with improved formatting
 st.markdown("""
 <style>
     .main-header {
@@ -159,229 +159,229 @@ EMPLOYEE_DATA = {
     }
 }
 
-# Comprehensive ES Training Handbook Data
+# Comprehensive LGL Handbook Data
 HANDBOOK_DATA = {
     'working_hours': {
         'title': 'Working Hours',
         'content': """
-        **Administrative Staff:**
-        • Working Days: Monday – Friday
-        • Working Hours: 9:00am – 6:00pm
-        
-        **Academic Staff:**
-        • Minimum 2 teaching sessions per day
-        • Sessions: 9:00am-12:00pm, 12:00pm-3:00pm, 3:00pm-6:00pm
-        • Working days: Monday to Friday
-        
-        **Overtime:**
-        • Paid according to confirmed attendance
-        • At management's discretion
-        
-        **Ramadan Hours:**
-        • Reduced by 2 hours per day for administrative staff
-        • One week notice for revised working times
+**Administrative Staff:**
+• Working Days: Monday – Friday
+• Working Hours: 9:00am – 6:00pm
+
+**Academic Staff:**
+• Minimum 2 teaching sessions per day
+• Sessions: 9:00am-12:00pm, 12:00pm-3:00pm, 3:00pm-6:00pm
+• Working days: Monday to Friday
+
+**Overtime:**
+• Paid according to confirmed attendance
+• At management's discretion
+
+**Ramadan Hours:**
+• Reduced by 2 hours per day for administrative staff
+• One week notice for revised working times
         """,
         'keywords': ['working hours', 'schedule', 'time', 'overtime', 'ramadan', 'shift', 'administrative', 'academic']
     },
     'annual_leave': {
         'title': 'Annual Leave Policy',
         'content': """
-        **Annual Leave Entitlement:**
-        • First Year: 20 working days (after probation)
-        • Subsequent Years: 22 working days
-        • Notice Required: Minimum twice the duration requested
-        
-        **Application Process:**
-        • Submit Annual Leave Form to line manager
-        • First-come, first-served basis
-        • Subject to operational requirements
-        
-        **Carrying Over Leave:**
-        • Maximum 7 days for administrative staff
-        • Teaching staff cannot carry over leave
-        
-        **Peak Periods:**
-        • Limited leave during July and August
-        • 4 weeks notice for restricted periods
+**Annual Leave Entitlement:**
+• First Year: 20 working days (after probation)
+• Subsequent Years: 22 working days
+• Notice Required: Minimum twice the duration requested
+
+**Application Process:**
+• Submit Annual Leave Form to line manager
+• First-come, first-served basis
+• Subject to operational requirements
+
+**Carrying Over Leave:**
+• Maximum 7 days for administrative staff
+• Teaching staff cannot carry over leave
+
+**Peak Periods:**
+• Limited leave during July and August
+• 4 weeks notice for restricted periods
         """,
         'keywords': ['annual leave', 'vacation', 'holiday', 'time off', 'leave policy', 'probation']
     },
     'sick_leave': {
         'title': 'Sick Leave Policy',
         'content': """
-        **Sick Leave Entitlement:**
-        • Total: 90 calendar days per year (after 3 months post-probation)
-        • Full Pay: First 15 days
-        • Half Pay: Next 30 days
-        • No Pay: Final 45 days
-        
-        **Application Process:**
-        • Notify line manager and HR within 1.5 hours (academic) / 1 hour (admin)
-        • Medical certificate required after 2 days
-        • Complete Sick Leave Form upon return
-        
-        **Coverage Includes:**
-        • Illness recovery
-        • Medical procedures/surgery
-        • Severe injury recovery
-        • COVID-19 quarantine/isolation
+**Sick Leave Entitlement:**
+• Total: 90 calendar days per year (after 3 months post-probation)
+• Full Pay: First 15 days
+• Half Pay: Next 30 days
+• No Pay: Final 45 days
+
+**Application Process:**
+• Notify line manager and HR within 1.5 hours (academic) / 1 hour (admin)
+• Medical certificate required after 2 days
+• Complete Sick Leave Form upon return
+
+**Coverage Includes:**
+• Illness recovery
+• Medical procedures/surgery
+• Severe injury recovery
+• COVID-19 quarantine/isolation
         """,
         'keywords': ['sick leave', 'illness', 'medical', 'health', 'doctor', 'certificate', 'absence']
     },
     'maternity_leave': {
         'title': 'Maternity & Parental Leave',
         'content': """
-        **Maternity Leave Entitlement:**
-        • Total: 60 days maternity leave
-        • Full Pay: First 45 consecutive calendar days
-        • Half Pay: Following 15 days
-        • Written notice: 15 weeks before due date
-        
-        **Extended Maternity Leave:**
-        • Additional 100 days without pay (consecutive or non-consecutive)
-        • Medical certificate required for illness-related extensions
-        
-        **Parental Leave:**
-        • Female employees: Additional 5 days within 6 months of birth
-        • Male employees: 5 days within 6 months of birth
-        
-        **Feeding Breaks:**
-        • Two 30-minute breaks daily for 18 months post-delivery
-        • Considered part of working hours
+**Maternity Leave Entitlement:**
+• Total: 60 days maternity leave
+• Full Pay: First 45 consecutive calendar days
+• Half Pay: Following 15 days
+• Written notice: 15 weeks before due date
+
+**Extended Maternity Leave:**
+• Additional 100 days without pay (consecutive or non-consecutive)
+• Medical certificate required for illness-related extensions
+
+**Parental Leave:**
+• Female employees: Additional 5 days within 6 months of birth
+• Male employees: 5 days within 6 months of birth
+
+**Feeding Breaks:**
+• Two 30-minute breaks daily for 18 months post-delivery
+• Considered part of working hours
         """,
         'keywords': ['maternity leave', 'parental leave', 'pregnancy', 'birth', 'feeding breaks', 'family']
+    },
+    'bereavement_leave': {
+        'title': 'Bereavement / Compassionate Leave',
+        'content': """
+**Bereavement Leave Entitlement:**
+• Five (5) paid days for the death of a spouse
+• Three (3) paid days for the death of a parent, child, sibling, grandchild, or grandparent
+
+**Application Process:**
+• Notify reporting line manager as soon as possible
+• Latest notification: first day of absence
+• Exceptional circumstances: applications considered after first day at management discretion
+
+**Support Available:**
+• Regular progress discussions with line manager during leave and upon return
+• Confidential discussions with HR Manager about grieving process impact on work performance
+• Time off for dependents available for emergencies involving family members
+
+**Coverage:**
+• Spouse death: 5 paid days
+• Immediate family death: 3 paid days
+• Emergency dependent care: Reasonable unpaid leave
+        """,
+        'keywords': ['bereavement', 'compassionate', 'death', 'family', 'grief', 'emergency', 'dependent']
     },
     'code_of_conduct': {
         'title': 'Code of Conduct',
         'content': """
-        **Employee Duties:**
-        • Exercise reasonable skill and care
-        • Obey rules, policies, and work directions
-        • Care for company property and facilities
-        • Maintain confidentiality of trade secrets
-        • Act in good faith and maintain trust
-        
-        **Dress Code:**
-        • Smart, professional attire required
-        • No torn, dirty, or inappropriate clothing
-        • No transparent clothing or low necklines
-        • No shorts or flip-flops
-        • Tattoos and piercings should be covered where possible
-        
-        **Safeguarding Standards:**
-        • No physical contact with students
-        • Avoid being alone with students
-        • Maintain professional boundaries
-        • No personal relationships with students
-        • Report safeguarding concerns immediately
+**Employee Duties:**
+• Exercise reasonable skill and care
+• Obey rules, policies, and work directions
+• Care for company property and facilities
+• Maintain confidentiality of trade secrets
+• Act in good faith and maintain trust
+
+**Dress Code:**
+• Smart, professional attire required
+• No torn, dirty, or inappropriate clothing
+• No transparent clothing or low necklines
+• No shorts or flip-flops
+• Tattoos and piercings should be covered where possible
+
+**Safeguarding Standards:**
+• No physical contact with students
+• Avoid being alone with students
+• Maintain professional boundaries
+• No personal relationships with students
+• Report safeguarding concerns immediately
         """,
         'keywords': ['conduct', 'dress code', 'safeguarding', 'professional', 'behavior', 'standards']
     },
     'disciplinary_procedures': {
         'title': 'Disciplinary Procedures',
         'content': """
-        **Minor Misconduct Examples:**
-        • Persistent lateness and poor timekeeping
-        • Unauthorized absence without valid reason
-        • Failure to follow prescribed procedures
-        • Incompetence or failure to meet standards
-        
-        **Gross Misconduct Examples:**
-        • Theft or unauthorized possession of company property
-        • Being unfit for duty due to alcohol/drug use
-        • Physical assault or verbal abuse
-        • Breach of confidentiality procedures
-        • Unlawful discrimination or harassment
-        
-        **Warning Validity Periods:**
-        • Verbal Warnings: 6 months
-        • First Written Warnings: 12 months
-        • Final Written Warnings: 12 months
-        
-        **Appeal Rights:**
-        • 5 days to submit written appeal
-        • Appeal meeting within 20 working days
+**Minor Misconduct Examples:**
+• Persistent lateness and poor timekeeping
+• Unauthorized absence without valid reason
+• Failure to follow prescribed procedures
+• Incompetence or failure to meet standards
+
+**Gross Misconduct Examples:**
+• Theft or unauthorized possession of company property
+• Being unfit for duty due to alcohol/drug use
+• Physical assault or verbal abuse
+• Breach of confidentiality procedures
+• Unlawful discrimination or harassment
+
+**Warning Validity Periods:**
+• Verbal Warnings: 6 months
+• First Written Warnings: 12 months
+• Final Written Warnings: 12 months
+
+**Appeal Rights:**
+• 5 days to submit written appeal
+• Appeal meeting within 20 working days
         """,
         'keywords': ['disciplinary', 'misconduct', 'warnings', 'dismissal', 'appeals', 'procedures']
     },
     'performance_management': {
         'title': 'Performance Management',
         'content': """
-        **Performance Appraisal Process:**
-        • First appraisal after 6-month probation
-        • Annual formal reviews thereafter
-        • Optional 6-month mid-year reviews
-        
-        **Appraisal Components:**
-        • Review of previous year's achievements
-        • Personal Development Plan for coming year
-        • Training needs identification
-        • Career planning discussions
-        
-        **Probationary Period:**
-        • Duration: 6 months for all new staff
-        • Performance monitoring throughout
-        • Review meeting at completion
-        • Possible 3-month extension if needed
-        
-        **Key Principles:**
-        • Fair and equitable process
-        • Confidential discussions
-        • Two-way communication
-        • Focus on development and improvement
+**Performance Appraisal Process:**
+• First appraisal after 6-month probation
+• Annual formal reviews thereafter
+• Optional 6-month mid-year reviews
+
+**Appraisal Components:**
+• Review of previous year's achievements
+• Personal Development Plan for coming year
+• Training needs identification
+• Career planning discussions
+
+**Probationary Period:**
+• Duration: 6 months for all new staff
+• Performance monitoring throughout
+• Review meeting at completion
+• Possible 3-month extension if needed
+
+**Key Principles:**
+• Fair and equitable process
+• Confidential discussions
+• Two-way communication
+• Focus on development and improvement
         """,
         'keywords': ['performance', 'appraisal', 'review', 'probation', 'development', 'evaluation']
     },
     'termination_gratuity': {
         'title': 'Termination & Gratuity',
         'content': """
-        **Notice Periods:**
-        • Unlimited contracts: 30 calendar days minimum
-        • Limited contracts: No notice required at natural expiry
-        
-        **Gratuity Calculations:**
-        **Years 1-5:** 21 calendar days' basic pay per year
-        **Year 6+:** 30 calendar days' basic pay per year
-        • Maximum total: 2 years' pay equivalent
-        
-        **Limited Contract Resignation:**
-        • Under 5 years: No gratuity entitlement
-        • Over 5 years: Same as unlimited contract
-        
-        **Early Termination Compensation:**
-        • Employer termination: 3 months' remuneration minimum
-        • Employee termination: Half of 3 months' remuneration
-        
-        **Exit Process:**
-        • Exit interviews conducted
-        • Return of company property
-        • Final settlement processing
+**Notice Periods:**
+• Unlimited contracts: 30 calendar days minimum
+• Limited contracts: No notice required at natural expiry
+
+**Gratuity Calculations:**
+**Years 1-5:** 21 calendar days' basic pay per year
+**Year 6+:** 30 calendar days' basic pay per year
+• Maximum total: 2 years' pay equivalent
+
+**Limited Contract Resignation:**
+• Under 5 years: No gratuity entitlement
+• Over 5 years: Same as unlimited contract
+
+**Early Termination Compensation:**
+• Employer termination: 3 months' remuneration minimum
+• Employee termination: Half of 3 months' remuneration
+
+**Exit Process:**
+• Exit interviews conducted
+• Return of company property
+• Final settlement processing
         """,
         'keywords': ['termination', 'resignation', 'gratuity', 'notice period', 'compensation', 'exit']
-    },
-    'bereavement_leave': {
-        'title': 'Bereavement / Compassionate Leave',
-        'content': """
-        **Bereavement Leave Entitlement:**
-        • Five (5) paid days for the death of a spouse
-        • Three (3) paid days for the death of a parent, child, sibling, grandchild, or grandparent
-        
-        **Application Process:**
-        • Notify reporting line manager as soon as possible
-        • Latest notification: first day of absence
-        • Exceptional circumstances: applications considered after first day at management discretion
-        
-        **Support Available:**
-        • Regular progress discussions with line manager during leave and upon return
-        • Confidential discussions with HR Manager about grieving process impact on work performance
-        • Time off for dependents available for emergencies involving family members
-        
-        **Coverage:**
-        • Spouse death: 5 paid days
-        • Immediate family death: 3 paid days
-        • Emergency dependent care: Reasonable unpaid leave
-        """,
-        'keywords': ['bereavement', 'compassionate', 'death', 'family', 'grief', 'emergency', 'dependent']
     }
 }
 
@@ -416,7 +416,7 @@ def calculate_leave_entitlements(employee_data):
     }
 
 def process_user_query(query):
-    """Process user query and return appropriate response"""
+    """Process user query and return appropriate response with smart leave detection"""
     query_lower = query.lower()
     
     # Smart leave type detection - show options when user types general terms
@@ -514,6 +514,8 @@ I'm here to help with LGL HR policies! You can ask me about:
 • "How do I apply for leave?" - Application process
 • "What is the dress code?" - Professional standards
 • "Disciplinary procedure" - Misconduct and warnings
+
+**Try typing:** "leave" to see all leave options!
 """
     }
 
@@ -642,7 +644,7 @@ for i, message in enumerate(st.session_state.messages):
 
 # Chat input
 with st.form("chat_form", clear_on_submit=True):
-    user_input = st.text_input("Type your question here:", placeholder="e.g., How many annual leave days do I have left?")
+    user_input = st.text_input("Type your question here:", placeholder="e.g., leave, annual leave balance, or dress code")
     submitted = st.form_submit_button("Send")
     
     if submitted and user_input:
