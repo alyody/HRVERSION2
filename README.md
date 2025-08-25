@@ -1,6 +1,6 @@
-# 🤖 ES Training DMCC HR Assistant
+# 🤖 LGL HR Assistant
 
-An intelligent AI-powered HR assistant that provides comprehensive support for ES Training DMCC employee handbook queries and HR operations.
+An intelligent AI-powered HR assistant that provides comprehensive support for LGL employee handbook queries and HR operations.
 
 ## 🌟 Features
 
@@ -12,7 +12,7 @@ An intelligent AI-powered HR assistant that provides comprehensive support for E
 
 ### 💬 **Interactive Interface**
 - Modern, responsive design with professional styling
-- Real-time chat interface with ES Training branding
+- Real-time chat interface with LGL branding
 - Quick action buttons for common HR topics
 - Beautiful gradient backgrounds and smooth animations
 
@@ -23,7 +23,6 @@ An intelligent AI-powered HR assistant that provides comprehensive support for E
 - **Code of Conduct** (Professional standards, Dress code, Safeguarding)
 - **Performance Management** (Appraisals, Probation procedures)
 - **Disciplinary Procedures** (Misconduct, Warnings, Appeals)
-- **COVID-19 Policy** (Health protocols, Quarantine rules)
 - **Termination & Gratuity** (Notice periods, End of service benefits)
 
 ### 👥 **Employee Management**
@@ -32,12 +31,19 @@ An intelligent AI-powered HR assistant that provides comprehensive support for E
 - **Personalized Greetings** and employee details display
 - **Department-based Access** to relevant policies
 
+### 🔘 **Smart Leave Detection**
+- When users type "leave" or similar general terms, the system automatically displays clickable buttons for:
+  - 🏖️ Annual Leave
+  - 🏥 Sick Leave  
+  - 👶 Maternity Leave
+  - 🍼 Bereavement Leave
+
 ## 🚀 Quick Start
 
 ### Local Development
 ```bash
 # Clone or download the files to your local machine
-cd "HR EMPLOYEE"
+cd "HRVERSION2"
 
 # Install dependencies
 pip install -r requirements.txt
@@ -55,12 +61,11 @@ streamlit run app.py
 ## 📁 File Structure
 
 ```
-HR EMPLOYEE/
+HRVERSION2/
 ├── app.py                 # Main Streamlit application
 ├── requirements.txt       # Python dependencies
 ├── README.md             # This documentation
-├── .gitignore            # Git ignore file
-└── Employee handbook.txt  # Source handbook document
+└── .gitignore            # Git ignore file
 ```
 
 ## 💻 Application Components
@@ -83,6 +88,7 @@ All HR policies are structured and organized for quick retrieval:
 - Keyword-based topic detection and matching
 - Leave balance calculations based on service years
 - Personalized responses for logged-in employees
+- Smart leave type detection with clickable buttons
 - Fallback responses for unmatched queries
 
 ## 📋 Sample Queries
@@ -91,13 +97,13 @@ All HR policies are structured and organized for quick retrieval:
 - "How many annual leave days do I have left?"
 - "What is the sick leave policy?"
 - "How do I apply for maternity leave?"
-- "When are the working hours?"
+- "leave" (triggers smart leave type selection)
 
 ### **Policies & Procedures**
 - "What is the dress code policy?"
 - "Tell me about the disciplinary procedure"
 - "How does the performance appraisal work?"
-- "What are the COVID-19 protocols?"
+- "What are the working hours?"
 
 ### **Benefits & Employment**
 - "What health insurance benefits do I get?"
@@ -105,22 +111,20 @@ All HR policies are structured and organized for quick retrieval:
 - "What is the probation period?"
 - "Tell me about gratuity payments"
 
-## 🎨 Customization
+## 🎨 Key Improvements
 
-### Company Branding
-- Update company name and logo in the header section
-- Modify color scheme in the CSS styling
-- Add custom company information and contact details
+### **Enhanced User Experience**
+- ✅ Fixed HTML formatting issues with proper CSS styling
+- ✅ Smart leave detection with clickable buttons
+- ✅ Updated branding from "ES Training DMCC" to "LGL HR Assistant"
+- ✅ Removed quick reference contact information
+- ✅ Improved text formatting and readability
 
-### Employee Data
-- Update the `EMPLOYEE_DATA` dictionary with real employee information
-- Modify leave calculations based on your specific policies
-- Add new employee fields as needed
-
-### Handbook Content
-- Edit the `HANDBOOK_DATA` dictionary to reflect your policies
-- Add new policy sections and topics
-- Update keywords for better query matching
+### **Interactive Features**
+- 🔘 Clickable leave type buttons for better navigation
+- 📊 Real-time leave balance calculations
+- 👤 Employee login with personalized responses
+- 🎯 Smart keyword matching across 50+ policy terms
 
 ## 🔧 Technical Details
 
@@ -133,7 +137,8 @@ All HR policies are structured and organized for quick retrieval:
 - Responsive design with mobile compatibility
 - Session state management for user interactions
 - Real-time leave balance calculations
-- Professional UI with ES Training branding
+- Professional UI with LGL branding
+- Structured response format to prevent HTML display issues
 
 ## 📱 Browser Compatibility
 
@@ -152,25 +157,18 @@ To enhance the HR assistant:
 3. **Add Features**: Implement new employee management capabilities
 4. **Update Styling**: Modify CSS for better user experience
 
-## 📞 Support & Contact
-
-For questions, issues, or feature requests:
-- **Company**: ES Training DMCC
-- **Location**: 15th Floor, Mazaya Business Avenue, BB1, JLT, Dubai, UAE
-- **Purpose**: Internal HR operations and employee support
-
 ## 📄 License
 
-This HR assistant is designed specifically for ES Training DMCC internal use and employee support operations.
+This HR assistant is designed specifically for LGL internal use and employee support operations.
 
-## 🏢 About ES Training DMCC
+## 🏢 About LGL
 
-ES Training is an international English language training centre based in Dubai, UAE. We provide high-quality English language education to students from around the world, with state-of-the-art facilities and experienced native English-speaking teachers.
+LGL is committed to providing excellent HR support and employee services. This intelligent assistant helps employees quickly access company policies and procedures.
 
-**Mission**: To deliver English Language and Business programmes of the highest quality to international students, providing them with the necessary skills for employment and further education.
+**Mission**: To deliver comprehensive HR support through innovative technology solutions.
 
-**Values**: Education with ethics and integrity, innovation through technology, personalized care, employee engagement, and creating a culture of warmth and belonging.
+**Values**: Employee engagement, transparency, efficiency, and continuous improvement.
 
 ---
 
-**Built with ❤️ for ES Training DMCC employees**
+**Built with ❤️ for LGL employees**
