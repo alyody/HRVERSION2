@@ -162,224 +162,271 @@ EMPLOYEE_DATA = {
 # Comprehensive LGL Handbook Data
 HANDBOOK_DATA = {
     'working_hours': {
-        'title': 'Working Hours',
+        'title': '🕒 Working Hours',
         'content': """
-**Administrative Staff:**
-• Working Days: Monday – Friday
-• Working Hours: 9:00am – 6:00pm
+## 👨‍💼 **Administrative Staff:**
+• 📅 **Working Days:** Monday – Friday
+• ⏰ **Working Hours:** 9:00am – 6:00pm
 
-**Academic Staff:**
-• Minimum 2 teaching sessions per day
-• Sessions: 9:00am-12:00pm, 12:00pm-3:00pm, 3:00pm-6:00pm
-• Working days: Monday to Friday
+## 👨‍🏫 **Academic Staff:**
+• 📚 **Minimum:** 2 teaching sessions per day
+• 🕘 **Morning Session:** 9:00am-12:00pm
+• 🕐 **Afternoon Session:** 12:00pm-3:00pm
+• 🕕 **Evening Session:** 3:00pm-6:00pm
+• 📅 **Working Days:** Monday to Friday
 
-**Overtime:**
-• Paid according to confirmed attendance
-• At management's discretion
+## ⏰ **Overtime Policy:**
+• 💰 **Payment:** According to confirmed attendance
+• 👔 **Approval:** At management's discretion
+• 📝 **Documentation:** Proper time tracking required
 
-**Ramadan Hours:**
-• Reduced by 2 hours per day for administrative staff
-• One week notice for revised working times
+## 🌙 **Ramadan Hours:**
+• ⏳ **Reduction:** 2 hours less per day for administrative staff
+• 📢 **Notice:** One week advance notice for revised working times
+• 🕌 **Respect:** Accommodating religious observances
         """,
         'keywords': ['working hours', 'schedule', 'time', 'overtime', 'ramadan', 'shift', 'administrative', 'academic']
     },
     'annual_leave': {
-        'title': 'Annual Leave Policy',
+        'title': '🏖️ Annual Leave Policy',
         'content': """
-**Annual Leave Entitlement:**
-• First Year: 20 working days (after probation)
-• Subsequent Years: 22 working days
-• Notice Required: Minimum twice the duration requested
+## 📅 **Annual Leave Entitlement:**
+• 🎆 **First Year:** 20 working days (after probation completion)
+• 🎉 **Subsequent Years:** 22 working days annually
+• ⏰ **Notice Required:** Minimum twice the duration requested
+• 🔄 **Example:** 2 weeks notice for 1 week leave
 
-**Application Process:**
-• Submit Annual Leave Form to line manager
-• First-come, first-served basis
-• Subject to operational requirements
+## 📝 **Application Process:**
+• 📎 **Step 1:** Submit Annual Leave Form to line manager
+• 🏃‍♂️ **Priority:** First-come, first-served basis
+• 🔍 **Review:** Subject to operational requirements
+• ✅ **Approval:** Manager confirmation required
 
-**Carrying Over Leave:**
-• Maximum 7 days for administrative staff
-• Teaching staff cannot carry over leave
+## 📦 **Carrying Over Leave:**
+• 👨‍💼 **Administrative Staff:** Maximum 7 days carry-over
+• 👨‍🏫 **Teaching Staff:** Cannot carry over leave
+• 🗺️ **Planning:** Use annual allocation within the year
 
-**Peak Periods:**
-• Limited leave during July and August
-• 4 weeks notice for restricted periods
+## 🌴 **Peak Periods Restrictions:**
+• 🚫 **Limited Availability:** July and August restrictions
+• 📢 **Advance Notice:** 4 weeks notice for restricted periods
+• 📈 **Priority:** Critical business operations first
         """,
         'keywords': ['annual leave', 'vacation', 'holiday', 'time off', 'leave policy', 'probation']
     },
     'sick_leave': {
-        'title': 'Sick Leave Policy',
+        'title': '🏥 Sick Leave Policy',
         'content': """
-**Sick Leave Entitlement:**
-• Total: 90 calendar days per year (after 3 months post-probation)
-• Full Pay: First 15 days
-• Half Pay: Next 30 days
-• No Pay: Final 45 days
+## 📅 **Sick Leave Entitlement:**
+• 🔢 **Total Allocation:** 90 calendar days per year
+• ✅ **Eligibility:** After 3 months post-probation
+• 💰 **Full Pay:** First 15 days
+• 💸 **Half Pay:** Next 30 days (days 16-45)
+• ❌ **No Pay:** Final 45 days (days 46-90)
 
-**Application Process:**
-• Notify line manager and HR within 1.5 hours (academic) / 1 hour (admin)
-• Medical certificate required after 2 days
-• Complete Sick Leave Form upon return
+## 📝 **Application Process:**
+• 📢 **Immediate Notification Required:**
+  • 👨‍🏫 **Academic Staff:** Within 1.5 hours
+  • 👨‍💼 **Administrative Staff:** Within 1 hour
+• 🏥 **Medical Certificate:** Required after 2 days absence
+• 📎 **Sick Leave Form:** Complete upon return to work
+• 📞 **Contact:** Notify both line manager and HR
 
-**Coverage Includes:**
-• Illness recovery
-• Medical procedures/surgery
-• Severe injury recovery
-• COVID-19 quarantine/isolation
+## 🌡️ **Coverage Includes:**
+• 🤒 **Illness Recovery:** General health conditions
+• ⚙️ **Medical Procedures:** Surgery and treatments
+• 🏅 **Severe Injury Recovery:** Accident-related injuries
+• 😷 **COVID-19:** Quarantine and isolation periods
+• 👩‍⚕️ **Doctor Appointments:** Essential medical visits
         """,
         'keywords': ['sick leave', 'illness', 'medical', 'health', 'doctor', 'certificate', 'absence']
     },
     'maternity_leave': {
-        'title': 'Maternity & Parental Leave',
+        'title': '👶 Maternity & Parental Leave',
         'content': """
-**Maternity Leave Entitlement:**
-• Total: 60 days maternity leave
-• Full Pay: First 45 consecutive calendar days
-• Half Pay: Following 15 days
-• Written notice: 15 weeks before due date
+## 🤰 **Maternity Leave Entitlement:**
+• 📅 **Total Duration:** 60 days maternity leave
+• 💰 **Full Pay:** First 45 consecutive calendar days
+• 💸 **Half Pay:** Following 15 days
+• 📢 **Advance Notice:** 15 weeks before due date
+• 📝 **Documentation:** Written notice required
 
-**Extended Maternity Leave:**
-• Additional 100 days without pay (consecutive or non-consecutive)
-• Medical certificate required for illness-related extensions
+## ⏳ **Extended Maternity Leave:**
+• 📅 **Additional Time:** 100 days without pay
+• 🔄 **Flexibility:** Consecutive or non-consecutive days
+• 🏥 **Medical Extensions:** Certificate required for illness-related extensions
+• 👩‍⚕️ **Health Priority:** Mother's wellbeing considered
 
-**Parental Leave:**
-• Female employees: Additional 5 days within 6 months of birth
-• Male employees: 5 days within 6 months of birth
+## 👨‍👩‍👶 **Parental Leave Benefits:**
+• 👩 **Female Employees:** Additional 5 days within 6 months of birth
+• 👨 **Male Employees:** 5 days within 6 months of birth
+• 👪 **Family Bonding:** Encouraging parental involvement
+• 💰 **Paid Leave:** Full compensation during parental leave
 
-**Feeding Breaks:**
-• Two 30-minute breaks daily for 18 months post-delivery
-• Considered part of working hours
+## 🍼 **Feeding Breaks Policy:**
+• ⏰ **Duration:** Two 30-minute breaks daily
+• 📅 **Period:** Available for 18 months post-delivery
+• 💼 **Work Integration:** Considered part of working hours
+• 👶 **Child Care:** Supporting nursing mothers
         """,
         'keywords': ['maternity leave', 'parental leave', 'pregnancy', 'birth', 'feeding breaks', 'family']
     },
     'bereavement_leave': {
-        'title': 'Bereavement / Compassionate Leave',
+        'title': '🕊 Bereavement / Compassionate Leave',
         'content': """
-**Bereavement Leave Entitlement:**
-• Five (5) paid days for the death of a spouse
-• Three (3) paid days for the death of a parent, child, sibling, grandchild, or grandparent
+## 📅 **Bereavement Leave Entitlement:**
+• 💑 **Spouse Death:** Five (5) paid days
+• 👪 **Immediate Family Death:** Three (3) paid days
+  • 👨‍👩‍👧‍👦 **Includes:** Parent, child, sibling, grandchild, grandparent
+• 💰 **Compensation:** Full pay during leave period
 
-**Application Process:**
-• Notify reporting line manager as soon as possible
-• Latest notification: first day of absence
-• Exceptional circumstances: applications considered after first day at management discretion
+## 📢 **Application Process:**
+• ⏰ **Immediate Notification:** Contact reporting line manager ASAP
+• 📅 **Latest Notification:** First day of absence
+• 🎆 **Exceptional Circumstances:** Applications considered after first day
+• 👔 **Management Discretion:** Case-by-case evaluation
+• 📝 **Documentation:** Death certificate may be required
 
-**Support Available:**
-• Regular progress discussions with line manager during leave and upon return
-• Confidential discussions with HR Manager about grieving process impact on work performance
-• Time off for dependents available for emergencies involving family members
+## 🤝 **Support Available:**
+• 💬 **Regular Check-ins:** Progress discussions with line manager
+• 🔒 **Confidential Support:** HR Manager discussions about grief impact
+• 🏠 **Return Assistance:** Work performance support during transition
+• 👪 **Family Care:** Time off for dependent emergencies
 
-**Coverage:**
-• Spouse death: 5 paid days
-• Immediate family death: 3 paid days
-• Emergency dependent care: Reasonable unpaid leave
+## 🛡️ **Coverage Summary:**
+• 💑 **Spouse Loss:** 5 paid days
+• 👨‍👩‍👧 **Immediate Family Loss:** 3 paid days
+• 🏠 **Emergency Dependent Care:** Reasonable unpaid leave
+• 💓 **Emotional Support:** Counseling resources available
         """,
         'keywords': ['bereavement', 'compassionate', 'death', 'family', 'grief', 'emergency', 'dependent']
     },
     'code_of_conduct': {
-        'title': 'Code of Conduct',
+        'title': '📋 Code of Conduct',
         'content': """
-**Employee Duties:**
-• Exercise reasonable skill and care
-• Obey rules, policies, and work directions
-• Care for company property and facilities
-• Maintain confidentiality of trade secrets
-• Act in good faith and maintain trust
+## 🎆 **Employee Duties & Responsibilities:**
+• 🎨 **Professional Excellence:** Exercise reasonable skill and care
+• 📜 **Policy Compliance:** Obey rules, policies, and work directions
+• 🏢 **Property Care:** Maintain company property and facilities
+• 🔒 **Confidentiality:** Protect trade secrets and sensitive information
+• 🤝 **Good Faith:** Act with integrity and maintain trust
+• 🎆 **Accountability:** Take responsibility for actions and decisions
 
-**Dress Code:**
-• Smart, professional attire required
-• No torn, dirty, or inappropriate clothing
-• No transparent clothing or low necklines
-• No shorts or flip-flops
-• Tattoos and piercings should be covered where possible
+## 👕 **Professional Dress Code:**
+• ✨ **Standard:** Smart, professional attire required
+• ❌ **Prohibited Items:**
+  • 👔 Torn, dirty, or inappropriate clothing
+  • 👀 Transparent clothing or low necklines
+  • 🩳 Shorts or flip-flops
+• 🎨 **Body Art:** Tattoos and piercings should be covered where possible
+• 👑 **Professional Image:** Maintain company reputation
 
-**Safeguarding Standards:**
-• No physical contact with students
-• Avoid being alone with students
-• Maintain professional boundaries
-• No personal relationships with students
-• Report safeguarding concerns immediately
+## 🛡️ **Safeguarding Standards:**
+• 🚫 **Physical Contact:** No physical contact with students
+• 👥 **Supervision:** Avoid being alone with students
+• 📏 **Boundaries:** Maintain professional relationships
+• ❌ **Personal Relationships:** No personal relationships with students
+• 📢 **Reporting:** Report safeguarding concerns immediately
+• 👶 **Child Protection:** Prioritize student safety and wellbeing
         """,
         'keywords': ['conduct', 'dress code', 'safeguarding', 'professional', 'behavior', 'standards']
     },
     'disciplinary_procedures': {
-        'title': 'Disciplinary Procedures',
+        'title': '⚖️ Disciplinary Procedures',
         'content': """
-**Minor Misconduct Examples:**
-• Persistent lateness and poor timekeeping
-• Unauthorized absence without valid reason
-• Failure to follow prescribed procedures
-• Incompetence or failure to meet standards
+## 🟡 **Minor Misconduct Examples:**
+• ⏰ **Attendance Issues:** Persistent lateness and poor timekeeping
+• 🚫 **Unauthorized Absence:** Absence without valid reason
+• 📋 **Procedure Violations:** Failure to follow prescribed procedures
+• 📉 **Performance Issues:** Incompetence or failure to meet standards
+• 📞 **Communication:** Poor response to guidance and feedback
 
-**Gross Misconduct Examples:**
-• Theft or unauthorized possession of company property
-• Being unfit for duty due to alcohol/drug use
-• Physical assault or verbal abuse
-• Breach of confidentiality procedures
-• Unlawful discrimination or harassment
+## 🔴 **Gross Misconduct Examples:**
+• 🔒 **Theft:** Unauthorized possession of company property
+• 🍷 **Substance Abuse:** Being unfit for duty due to alcohol/drug use
+• 🥊 **Violence:** Physical assault or verbal abuse
+• 📢 **Confidentiality Breach:** Sharing sensitive information
+• ⚠️ **Discrimination:** Unlawful discrimination or harassment
+• 🚫 **Serious Violations:** Actions that damage company reputation
 
-**Warning Validity Periods:**
-• Verbal Warnings: 6 months
-• First Written Warnings: 12 months
-• Final Written Warnings: 12 months
+## ⏳ **Warning Validity Periods:**
+• 🗣️ **Verbal Warnings:** 6 months active period
+• 📝 **First Written Warnings:** 12 months active period
+• ⚠️ **Final Written Warnings:** 12 months active period
+• 📅 **Record Keeping:** All warnings documented in personnel file
 
-**Appeal Rights:**
-• 5 days to submit written appeal
-• Appeal meeting within 20 working days
+## 📜 **Appeal Rights Process:**
+• ⏰ **Timeline:** 5 days to submit written appeal
+• 📅 **Meeting:** Appeal meeting within 20 working days
+• 👔 **Review:** Independent management review
+• ⚖️ **Fair Process:** Right to representation and fair hearing
         """,
         'keywords': ['disciplinary', 'misconduct', 'warnings', 'dismissal', 'appeals', 'procedures']
     },
     'performance_management': {
-        'title': 'Performance Management',
+        'title': '🎆 Performance Management',
         'content': """
-**Performance Appraisal Process:**
-• First appraisal after 6-month probation
-• Annual formal reviews thereafter
-• Optional 6-month mid-year reviews
+## 📅 **Performance Appraisal Schedule:**
+• 🎆 **Initial Review:** First appraisal after 6-month probation
+• 🔄 **Annual Reviews:** Formal reviews conducted yearly
+• 📈 **Mid-Year Reviews:** Optional 6-month progress check-ins
+• ⏰ **Timing:** Scheduled based on hire date anniversary
 
-**Appraisal Components:**
-• Review of previous year's achievements
-• Personal Development Plan for coming year
-• Training needs identification
-• Career planning discussions
+## 📊 **Appraisal Components:**
+• 🏆 **Achievement Review:** Assessment of previous year's accomplishments
+• 🎨 **Development Planning:** Personal Development Plan for coming year
+• 📚 **Training Identification:** Skills and training needs assessment
+• 🚀 **Career Discussions:** Future career planning and growth opportunities
+• 📈 **Goal Setting:** SMART objectives for the upcoming period
 
-**Probationary Period:**
-• Duration: 6 months for all new staff
-• Performance monitoring throughout
-• Review meeting at completion
-• Possible 3-month extension if needed
+## ⏳ **Probationary Period Management:**
+• 📅 **Duration:** 6 months for all new staff members
+• 🔍 **Continuous Monitoring:** Performance tracking throughout probation
+• 💬 **Review Meeting:** Formal assessment at completion
+• ⏳ **Extension Option:** Possible 3-month extension if needed
+• ✅ **Confirmation:** Permanent employment confirmation upon success
 
-**Key Principles:**
-• Fair and equitable process
-• Confidential discussions
-• Two-way communication
-• Focus on development and improvement
+## 🎆 **Key Management Principles:**
+• ⚖️ **Fair Process:** Equitable treatment for all employees
+• 🔒 **Confidentiality:** Private and secure discussions
+• 💬 **Two-Way Communication:** Open dialogue and feedback
+• 🚀 **Development Focus:** Emphasis on growth and improvement
+• 🏅 **Recognition:** Acknowledging achievements and progress
         """,
         'keywords': ['performance', 'appraisal', 'review', 'probation', 'development', 'evaluation']
     },
     'termination_gratuity': {
-        'title': 'Termination & Gratuity',
+        'title': '🏁 Termination & Gratuity',
         'content': """
-**Notice Periods:**
-• Unlimited contracts: 30 calendar days minimum
-• Limited contracts: No notice required at natural expiry
+## 📅 **Notice Periods Required:**
+• ♾️ **Unlimited Contracts:** 30 calendar days minimum notice
+• 📆 **Limited Contracts:** No notice required at natural expiry
+• 📝 **Written Notice:** Formal documentation required
+• ⏰ **Mutual Agreement:** Terms can be negotiated between parties
 
-**Gratuity Calculations:**
-**Years 1-5:** 21 calendar days' basic pay per year
-**Year 6+:** 30 calendar days' basic pay per year
-• Maximum total: 2 years' pay equivalent
+## 💰 **Gratuity Calculation Structure:**
+• 🎆 **Years 1-5:** 21 calendar days' basic pay per year of service
+• 🚀 **Year 6+:** 30 calendar days' basic pay per year of service
+• 🔢 **Maximum Cap:** Total not exceeding 2 years' pay equivalent
+• 📈 **Calculation Base:** Based on final basic salary
 
-**Limited Contract Resignation:**
-• Under 5 years: No gratuity entitlement
-• Over 5 years: Same as unlimited contract
+## 📋 **Limited Contract Resignation Rules:**
+• ❌ **Under 5 Years Service:** No gratuity entitlement
+• ✅ **Over 5 Years Service:** Same calculation as unlimited contracts
+• 📅 **Service Period:** Continuous employment counted
+• 💼 **Contract Type:** Rules apply based on final contract status
 
-**Early Termination Compensation:**
-• Employer termination: 3 months' remuneration minimum
-• Employee termination: Half of 3 months' remuneration
+## ⚠️ **Early Termination Compensation:**
+• 🏢 **Employer Termination:** 3 months' remuneration minimum
+• 👨‍💼 **Employee Termination:** Half of 3 months' remuneration
+• ⚖️ **Legal Compliance:** As per UAE Labor Law
+• 💸 **Payment Timeline:** Settlement within 14 days
 
-**Exit Process:**
-• Exit interviews conducted
-• Return of company property
-• Final settlement processing
+## 📝 **Exit Process Requirements:**
+• 💬 **Exit Interview:** Conducted with HR department
+• 🖼️ **Property Return:** All company assets and equipment
+• 💳 **Final Settlement:** Complete financial reconciliation
+• 📋 **Documentation:** Clearance certificates and references
         """,
         'keywords': ['termination', 'resignation', 'gratuity', 'notice period', 'compensation', 'exit']
     }
@@ -437,15 +484,17 @@ def process_user_query(query):
                 'content': f"""
 📊 **Your Current Leave Balances:**
 
-**Annual Leave:** {leave_data['annual_leave']['remaining']} days remaining
-• Entitlement: {leave_data['annual_leave']['entitlement']} days
-• Used: {leave_data['annual_leave']['taken']} days
+## 🏖️ **Annual Leave:**
+• 🎆 **Remaining:** {leave_data['annual_leave']['remaining']} days
+• 💰 **Total Entitlement:** {leave_data['annual_leave']['entitlement']} days
+• 📋 **Already Used:** {leave_data['annual_leave']['taken']} days
 
-**Sick Leave:** {leave_data['sick_leave']['remaining']} days remaining  
-• Entitlement: {leave_data['sick_leave']['entitlement']} days
-• Used: {leave_data['sick_leave']['taken']} days
+## 🏥 **Sick Leave:**
+• 🎆 **Remaining:** {leave_data['sick_leave']['remaining']} days
+• 💰 **Total Entitlement:** {leave_data['sick_leave']['entitlement']} days
+• 📋 **Already Used:** {leave_data['sick_leave']['taken']} days
 
-💡 **Need to apply for leave?** Ask me "How do I apply for annual leave?" for the application process.
+💡 **Need to apply for leave?** Ask me "How do I apply for annual leave?" for the complete application process!
 """
             }
         else:
@@ -460,18 +509,27 @@ def process_user_query(query):
             return {
                 'type': 'text',
                 'content': """
-📋 **How to Apply for Leave:**
+📝 **How to Apply for Leave - Step by Step Guide:**
 
-**Step 1:** Submit Annual Leave Form to your line manager
-**Step 2:** Provide minimum notice (twice the duration requested)
-**Step 3:** Wait for approval based on operational requirements
+## 🚀 **Application Process:**
+• **📅 Step 1:** Submit Annual Leave Form to your line manager
+• **⏰ Step 2:** Provide minimum notice (twice the duration requested)
+• **✅ Step 3:** Wait for approval based on operational requirements
 
-**Example:** For 1 week leave, submit request 2 weeks in advance
+## 📊 **Timing Examples:**
+• 🏖️ **1 Week Leave:** Submit request 2 weeks in advance
+• 🏴 **2 Week Leave:** Submit request 4 weeks in advance
+• 🎆 **3 Week Leave:** Submit request 6 weeks in advance
 
-**Peak Restrictions:** Limited availability during July-August (4 weeks notice given)
-**Processing:** First-come, first-served basis
+## ⚠️ **Important Restrictions:**
+• 🏴 **Peak Season:** Limited availability during July-August
+• 📢 **Advance Notice:** 4 weeks notice given for restricted periods
+• 🏃‍♂️ **Priority System:** First-come, first-served basis
 
-📞 **Need the form?** Contact HR Department or your line manager
+## 📞 **Need Help?**
+• 📎 **Forms:** Contact HR Department for leave forms
+• 👨‍💼 **Questions:** Speak with your line manager
+• 💬 **Policy Details:** Ask me about specific leave policies
 """
             }
     
@@ -498,24 +556,27 @@ def process_user_query(query):
     return {
         'type': 'text',
         'content': """
-I'm here to help with LGL HR policies! You can ask me about:
+🚀 **Welcome to LGL HR Assistant!** I'm here to help with all your HR policy questions! 🎆
 
-🕒 **Working Hours** - Schedule, overtime, Ramadan hours
-🏖️ **Annual Leave** - Entitlements, application process  
-🏥 **Sick Leave** - Medical leave policies
-👶 **Maternity/Parental Leave** - Family leave policies
-📋 **Code of Conduct** - Professional standards, dress code
-🎯 **Performance Management** - Appraisals and reviews
-⚖️ **Disciplinary Procedures** - Warnings, misconduct, appeals
-🏁 **Termination & Gratuity** - Notice periods, end-of-service benefits
+## 📚 **Available Topics:**
 
-**Quick Commands:**
-• "My leave balance" - Check your remaining days
-• "How do I apply for leave?" - Application process
-• "What is the dress code?" - Professional standards
-• "Disciplinary procedure" - Misconduct and warnings
+• 🕒 **Working Hours** - Schedule, overtime, Ramadan hours
+• 🏖️ **Annual Leave** - Entitlements, application process  
+• 🏥 **Sick Leave** - Medical leave policies
+• 👶 **Maternity/Parental Leave** - Family leave policies
+• 📋 **Code of Conduct** - Professional standards, dress code
+• 🎆 **Performance Management** - Appraisals and reviews
+• ⚖️ **Disciplinary Procedures** - Warnings, misconduct, appeals
+• 🏁 **Termination & Gratuity** - Notice periods, end-of-service benefits
 
-**Try typing:** "leave" to see all leave options!
+## ⚡ **Quick Commands:**
+• 📊 "My leave balance" - Check your remaining days
+• 📝 "How do I apply for leave?" - Application process
+• 👕 "What is the dress code?" - Professional standards
+• ⚖️ "Disciplinary procedure" - Misconduct and warnings
+
+## 🎁 **Pro Tip:**
+💬 **Try typing:** "leave" to see all leave options with clickable buttons!
 """
     }
 
