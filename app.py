@@ -9,7 +9,7 @@ import json
 
 # Configure the page
 st.set_page_config(
-    page_title="ES Training DMCC HR Assistant",
+    page_title="LGL HR Assistant",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -69,6 +69,22 @@ st.markdown("""
         margin: 1rem 0 !important;
         color: rgb(44, 62, 80) !important;
         box-shadow: 0 2px 8px rgba(52, 152, 219, 0.1) !important;
+        line-height: 1.6 !important;
+    }
+    
+    .bot-message h2, .bot-message h3 {
+        color: rgb(52, 152, 219) !important;
+        margin-top: 1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .bot-message ul {
+        margin: 0.5rem 0 !important;
+        padding-left: 1.5rem !important;
+    }
+    
+    .bot-message li {
+        margin-bottom: 0.3rem !important;
     }
     
     .user-message {
@@ -342,6 +358,30 @@ HANDBOOK_DATA = {
         • Final settlement processing
         """,
         'keywords': ['termination', 'resignation', 'gratuity', 'notice period', 'compensation', 'exit']
+    },
+    'bereavement_leave': {
+        'title': 'Bereavement / Compassionate Leave',
+        'content': """
+        **Bereavement Leave Entitlement:**
+        • Five (5) paid days for the death of a spouse
+        • Three (3) paid days for the death of a parent, child, sibling, grandchild, or grandparent
+        
+        **Application Process:**
+        • Notify reporting line manager as soon as possible
+        • Latest notification: first day of absence
+        • Exceptional circumstances: applications considered after first day at management discretion
+        
+        **Support Available:**
+        • Regular progress discussions with line manager during leave and upon return
+        • Confidential discussions with HR Manager about grieving process impact on work performance
+        • Time off for dependents available for emergencies involving family members
+        
+        **Coverage:**
+        • Spouse death: 5 paid days
+        • Immediate family death: 3 paid days
+        • Emergency dependent care: Reasonable unpaid leave
+        """,
+        'keywords': ['bereavement', 'compassionate', 'death', 'family', 'grief', 'emergency', 'dependent']
     }
 }
 
@@ -379,44 +419,61 @@ def process_user_query(query):
     """Process user query and return appropriate response"""
     query_lower = query.lower()
     
+    # Smart leave type detection - show options when user types general terms
+    leave_triggers = ['leave', 'time off', 'absence', 'vacation', 'holiday']
+    if any(trigger in query_lower for trigger in leave_triggers) and not any(specific in query_lower for specific in ['annual', 'sick', 'maternity', 'parental', 'bereavement']):
+        return {
+            'type': 'leave_options',
+            'content': "🏖️ **Which type of leave are you asking about?**\n\nPlease select from the options below:"
+        }
+    
     # Leave balance queries
     if any(word in query_lower for word in ['balance', 'remaining', 'left', 'how many']):
         if st.session_state.get('current_employee'):
             emp_data = st.session_state.employee_data
             leave_data = calculate_leave_entitlements(emp_data)
-            return f"""
-            📊 **Your Current Leave Balances:**
-            
-            **Annual Leave:** {leave_data['annual_leave']['remaining']} days remaining
-            • Entitlement: {leave_data['annual_leave']['entitlement']} days
-            • Used: {leave_data['annual_leave']['taken']} days
-            
-            **Sick Leave:** {leave_data['sick_leave']['remaining']} days remaining  
-            • Entitlement: {leave_data['sick_leave']['entitlement']} days
-            • Used: {leave_data['sick_leave']['taken']} days
-            
-            💡 **Need to apply for leave?** Ask me "How do I apply for annual leave?" for the application process.
-            """
+            return {
+                'type': 'text',
+                'content': f"""
+📊 **Your Current Leave Balances:**
+
+**Annual Leave:** {leave_data['annual_leave']['remaining']} days remaining
+• Entitlement: {leave_data['annual_leave']['entitlement']} days
+• Used: {leave_data['annual_leave']['taken']} days
+
+**Sick Leave:** {leave_data['sick_leave']['remaining']} days remaining  
+• Entitlement: {leave_data['sick_leave']['entitlement']} days
+• Used: {leave_data['sick_leave']['taken']} days
+
+💡 **Need to apply for leave?** Ask me "How do I apply for annual leave?" for the application process.
+"""
+            }
         else:
-            return "Please select your employee profile from the sidebar to view your leave balances."
+            return {
+                'type': 'text',
+                'content': "Please select your employee profile from the sidebar to view your leave balances."
+            }
     
     # Specific policy queries
     if any(word in query_lower for word in ['apply', 'application', 'request', 'form']):
         if any(word in query_lower for word in ['leave', 'vacation', 'holiday']):
-            return """
-            📋 **How to Apply for Leave:**
-            
-            **Step 1:** Submit Annual Leave Form to your line manager
-            **Step 2:** Provide minimum notice (twice the duration requested)
-            **Step 3:** Wait for approval based on operational requirements
-            
-            **Example:** For 1 week leave, submit request 2 weeks in advance
-            
-            **Peak Restrictions:** Limited availability during July-August (4 weeks notice given)
-            **Processing:** First-come, first-served basis
-            
-            📞 **Need the form?** Contact HR Department or your line manager
-            """
+            return {
+                'type': 'text',
+                'content': """
+📋 **How to Apply for Leave:**
+
+**Step 1:** Submit Annual Leave Form to your line manager
+**Step 2:** Provide minimum notice (twice the duration requested)
+**Step 3:** Wait for approval based on operational requirements
+
+**Example:** For 1 week leave, submit request 2 weeks in advance
+
+**Peak Restrictions:** Limited availability during July-August (4 weeks notice given)
+**Processing:** First-come, first-served basis
+
+📞 **Need the form?** Contact HR Department or your line manager
+"""
+            }
     
     # Find best matching topic
     best_match = None
@@ -433,37 +490,43 @@ def process_user_query(query):
             best_match = topic_data
     
     if best_match:
-        return f"## {best_match['title']}\n{best_match['content']}"
+        return {
+            'type': 'text',
+            'content': f"## {best_match['title']}\n{best_match['content']}"
+        }
     
-    return """
-    I'm here to help with ES Training DMCC HR policies! You can ask me about:
-    
-    🕒 **Working Hours** - Schedule, overtime, Ramadan hours
-    🏖️ **Annual Leave** - Entitlements, application process  
-    🏥 **Sick Leave** - Medical leave policies
-    👶 **Maternity/Parental Leave** - Family leave policies
-    📋 **Code of Conduct** - Professional standards, dress code
-    🎯 **Performance Management** - Appraisals and reviews
-    ⚖️ **Disciplinary Procedures** - Warnings, misconduct, appeals
-    🏁 **Termination & Gratuity** - Notice periods, end-of-service benefits
-    
-    **Quick Commands:**
-    • "My leave balance" - Check your remaining days
-    • "How do I apply for leave?" - Application process
-    • "What is the dress code?" - Professional standards
-    • "Disciplinary procedure" - Misconduct and warnings
-    
-    Try asking: "What are the working hours?" or "How do I apply for annual leave?"
-    """
+    return {
+        'type': 'text',
+        'content': """
+I'm here to help with LGL HR policies! You can ask me about:
+
+🕒 **Working Hours** - Schedule, overtime, Ramadan hours
+🏖️ **Annual Leave** - Entitlements, application process  
+🏥 **Sick Leave** - Medical leave policies
+👶 **Maternity/Parental Leave** - Family leave policies
+📋 **Code of Conduct** - Professional standards, dress code
+🎯 **Performance Management** - Appraisals and reviews
+⚖️ **Disciplinary Procedures** - Warnings, misconduct, appeals
+🏁 **Termination & Gratuity** - Notice periods, end-of-service benefits
+
+**Quick Commands:**
+• "My leave balance" - Check your remaining days
+• "How do I apply for leave?" - Application process
+• "What is the dress code?" - Professional standards
+• "Disciplinary procedure" - Misconduct and warnings
+"""
+    }
 
 # Initialize session state
 if 'messages' not in st.session_state:
     st.session_state.messages = []
+if 'show_leave_options' not in st.session_state:
+    st.session_state.show_leave_options = False
 
 # Header
 st.markdown("""
 <div class="main-header">
-    <h1>🤖 ES Training DMCC HR Assistant</h1>
+    <h1>🤖 LGL HR Assistant</h1>
     <p>Your intelligent guide to company policies and procedures</p>
 </div>
 """, unsafe_allow_html=True)
@@ -506,72 +569,97 @@ if selected_employee != 'Select Employee':
         """)
 
 # Main content area
-col1, col2 = st.columns([3, 1])
+st.markdown("### 🚀 Quick Topics:")
 
-with col1:
-    # Quick Topics
-    st.markdown("### 🚀 Quick Topics:")
-    
-    topic_cols = st.columns(3)
-    with topic_cols[0]:
-        if st.button("🕒 Working Hours"):
-            response = process_user_query("working hours")
-            st.session_state.messages.append({"role": "user", "content": "Working Hours"})
-            st.session_state.messages.append({"role": "assistant", "content": response})
-    
-    with topic_cols[1]:
-        if st.button("🏖️ Annual Leave"):
-            response = process_user_query("annual leave")
-            st.session_state.messages.append({"role": "user", "content": "Annual Leave"})
-            st.session_state.messages.append({"role": "assistant", "content": response})
-    
-    with topic_cols[2]:
-        if st.button("🏥 Sick Leave"):
-            response = process_user_query("sick leave")
-            st.session_state.messages.append({"role": "user", "content": "Sick Leave"})
-            st.session_state.messages.append({"role": "assistant", "content": response})
+topic_cols = st.columns(3)
+with topic_cols[0]:
+    if st.button("🕒 Working Hours"):
+        response = process_user_query("working hours")
+        st.session_state.messages.append({"role": "user", "content": "Working Hours"})
+        st.session_state.messages.append({"role": "assistant", "content": response})
+        st.rerun()
 
-    # Chat Interface
-    st.markdown("---")
-    st.markdown("### 💬 Ask me anything about HR policies:")
-    
-    # Display chat messages
-    for message in st.session_state.messages:
-        if message["role"] == "user":
-            st.markdown(f'<div class="user-message">{message["content"]}</div>', unsafe_allow_html=True)
+with topic_cols[1]:
+    if st.button("🏖️ Annual Leave"):
+        response = process_user_query("annual leave")
+        st.session_state.messages.append({"role": "user", "content": "Annual Leave"})
+        st.session_state.messages.append({"role": "assistant", "content": response})
+        st.rerun()
+
+with topic_cols[2]:
+    if st.button("🏥 Sick Leave"):
+        response = process_user_query("sick leave")
+        st.session_state.messages.append({"role": "user", "content": "Sick Leave"})
+        st.session_state.messages.append({"role": "assistant", "content": response})
+        st.rerun()
+
+# Chat Interface
+st.markdown("---")
+st.markdown("### 💬 Ask me anything about HR policies:")
+
+# Display chat messages
+for i, message in enumerate(st.session_state.messages):
+    if message["role"] == "user":
+        st.markdown(f'<div class="user-message">{message["content"]}</div>', unsafe_allow_html=True)
+    else:
+        # Handle different response types
+        if isinstance(message["content"], dict):
+            if message["content"]["type"] == "leave_options":
+                st.markdown(f'<div class="bot-message">{message["content"]["content"]}</div>', unsafe_allow_html=True)
+                
+                # Display leave type buttons
+                leave_cols = st.columns(2)
+                with leave_cols[0]:
+                    if st.button("🏖️ Annual Leave", key=f"annual_{i}"):
+                        response = process_user_query("annual leave")
+                        st.session_state.messages.append({"role": "user", "content": "Annual Leave"})
+                        st.session_state.messages.append({"role": "assistant", "content": response})
+                        st.rerun()
+                    
+                    if st.button("👶 Maternity Leave", key=f"maternity_{i}"):
+                        response = process_user_query("maternity leave")
+                        st.session_state.messages.append({"role": "user", "content": "Maternity Leave"})
+                        st.session_state.messages.append({"role": "assistant", "content": response})
+                        st.rerun()
+                
+                with leave_cols[1]:
+                    if st.button("🏥 Sick Leave", key=f"sick_{i}"):
+                        response = process_user_query("sick leave")
+                        st.session_state.messages.append({"role": "user", "content": "Sick Leave"})
+                        st.session_state.messages.append({"role": "assistant", "content": response})
+                        st.rerun()
+                    
+                    if st.button("🍼 Bereavement Leave", key=f"bereavement_{i}"):
+                        response = process_user_query("bereavement leave")
+                        st.session_state.messages.append({"role": "user", "content": "Bereavement Leave"})
+                        st.session_state.messages.append({"role": "assistant", "content": response})
+                        st.rerun()
+            else:
+                st.markdown(f'<div class="bot-message">{message["content"]["content"]}</div>', unsafe_allow_html=True)
         else:
+            # Handle string responses (backward compatibility)
             st.markdown(f'<div class="bot-message">{message["content"]}</div>', unsafe_allow_html=True)
-    
-    # Chat input
-    with st.form("chat_form", clear_on_submit=True):
-        user_input = st.text_input("Type your question here:", placeholder="e.g., How many annual leave days do I have left?")
-        submitted = st.form_submit_button("Send")
-        
-        if submitted and user_input:
-            # Add user message
-            st.session_state.messages.append({"role": "user", "content": user_input})
-            
-            # Generate response
-            response = process_user_query(user_input)
-            st.session_state.messages.append({"role": "assistant", "content": response})
-            
-            st.rerun()
 
-with col2:
-    st.markdown("### 📚 Quick Reference")
-    st.info("""
-    **Contact Information:**
-    📧 HR Department
-    📞 ES Training DMCC
-    📍 15th Floor, Mazaya Business Avenue
-    BB1, JLT, Dubai, UAE
-    """)
+# Chat input
+with st.form("chat_form", clear_on_submit=True):
+    user_input = st.text_input("Type your question here:", placeholder="e.g., How many annual leave days do I have left?")
+    submitted = st.form_submit_button("Send")
+    
+    if submitted and user_input:
+        # Add user message
+        st.session_state.messages.append({"role": "user", "content": user_input})
+        
+        # Generate response
+        response = process_user_query(user_input)
+        st.session_state.messages.append({"role": "assistant", "content": response})
+        
+        st.rerun()
 
 # Footer
 st.markdown("""
 <div class="footer">
-    <strong>ES Training DMCC HR Assistant</strong><br>
+    <strong>LGL HR Assistant</strong><br>
     Helping employees navigate company policies with ease<br>
-    <small>15th Floor, Mazaya Business Avenue, BB1, JLT, Dubai, UAE</small>
+    <small>Your intelligent guide to HR policies and procedures</small>
 </div>
 """, unsafe_allow_html=True)
